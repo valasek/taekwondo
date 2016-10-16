@@ -1,0 +1,602 @@
+- model: taekwondo.sex
+  pk: 1
+  fields:
+    name: Female
+- model: taekwondo.sex
+  pk: 2
+  fields:
+    name: Male
+
+- model: taekwondo.competition
+  pk: 1
+  fields:
+    name: Světový pohár 2016
+    location: Budapešť
+    date: 12. října - 16. října 2016
+    deadline: 2016-08-30
+    fee: 200
+    instructions_url: http://taekwondocz.com/files/PROPOZICE%20MR%202016.pdf
+    langlong: 50.289,14.830
+
+- model: taekwondo.team
+  pk: 1
+  fields:
+    name: Sparring
+- model: taekwondo.team
+  pk: 2
+  fields:
+    name: Stránčice
+
+- model: taekwondo.level
+  pk: 1
+  fields:
+    name: 9. DAN
+- model: taekwondo.level
+  pk: 2
+  fields:
+    name: 8. DAN
+- model: taekwondo.level
+  pk: 3
+  fields:
+    name: 7. DAN
+- model: taekwondo.level
+  pk: 4
+  fields:
+    name: 6. DAN
+- model: taekwondo.level
+  pk: 5
+  fields:
+    name: 5. DAN
+- model: taekwondo.level
+  pk: 6
+  fields:
+    name: 4. DAN
+- model: taekwondo.level
+  pk: 7
+  fields:
+    name: 3. DAN
+- model: taekwondo.level
+  pk: 7
+  fields:
+    name: 2. DAN
+- model: taekwondo.level
+  pk: 8
+  fields:
+    name: 1. DAN
+- model: taekwondo.level
+  pk: 9
+  fields:
+    name: 9. KUP
+- model: taekwondo.level
+  pk: 10
+  fields:
+    name: 8. KUP
+- model: taekwondo.level
+  pk: 11
+  fields:
+    name: 7. KUP
+- model: taekwondo.level
+  pk: 12
+  fields:
+    name: 6. KUP
+- model: taekwondo.level
+  pk: 13
+  fields:
+    name: 5. KUP
+- model: taekwondo.level
+  pk: 14
+  fields:
+    name: 4. KUP
+- model: taekwondo.level
+  pk: 15
+  fields:
+    name: 3. KUP
+- model: taekwondo.level
+  pk: 16
+  fields:
+    name: 2. KUP
+- model: taekwondo.level
+  pk: 17
+  fields:
+    name: 1. KUP
+
+- model: taekwondo.member
+  pk: 1
+  fields:
+    itf_id: 507195
+    first_name: Natálie
+    last_name: Podskalníková
+    birthdate: 2005-07-10
+    level: 1
+    sex: 1
+    team: 1
+- model: taekwondo.member
+  pk: 2
+  fields:
+    itf_id: 507191
+    first_name: Peter
+    last_name: Podskalník
+    birthdate: 1999-07-10
+    level: 2
+    sex: 2
+    team: 1
+- model: taekwondo.member
+  pk: 3
+  fields:
+    itf_id: 507196
+    first_name: Patricie
+    last_name: Pokorná
+    birthdate: 1999-07-10
+    level: 3
+    sex: 1
+    team: 2
+- model: taekwondo.member
+  pk: 4
+  fields:
+    itf_id: 507196
+    first_name: Patrik
+    last_name: Pokorný
+    birthdate: 1999-07-10
+    level: 4
+    sex: 2
+    team: 2
+
+    sex: 2
+- model: taekwondo.matsogi
+  pk: 1
+  fields:
+    name: Nepřiřazeno
+    sex: 2
+- model: taekwondo.matsogi
+  pk: 2
+  fields:
+    name: Nepřiřazeno
+    sex: 1
+- model: taekwondo.matsogi
+  pk: 3
+  fields:
+    name: Žáci do 32 kg
+    sex: 2
+- model: taekwondo.matsogi
+  pk: 4
+  fields:
+    name: Žáci 32 – 38 kg
+    sex: 2
+- model: taekwondo.matsogi
+  pk: 5
+  fields:
+    name: Žáci 38 – 44 kg
+    sex: 2
+- model: taekwondo.matsogi
+  pk: 6
+  fields:
+    name: Žáci 44 – 50 kg
+    sex: 2
+- model: taekwondo.matsogi
+  pk: 7
+  fields:
+    name: Žáci nad 50 kg
+    sex: 1
+- model: taekwondo.matsogi
+  pk: 8
+  fields:
+    name: Žákyně do 32 kg
+    sex: 1
+- model: taekwondo.matsogi
+  pk: 9
+  fields:
+    name: Žákyně 32 – 38 kg
+    sex: 1
+- model: taekwondo.matsogi
+  pk: 10
+  fields:
+    name: Žákyně 38 – 44 kg
+    sex: 1
+- model: taekwondo.matsogi
+  pk: 11
+  fields:
+    name: Žákyně 44 – 50 kg
+    sex: 1
+- model: taekwondo.matsogi
+  pk: 12
+  fields:
+    name: Žákyně nad 50 kg
+    sex: 1
+- model: taekwondo.matsogi
+  pk: 13
+  fields:
+    name: Junioři do 50 kg
+    sex: 2
+- model: taekwondo.matsogi
+  pk: 14
+  fields:
+    name: Junioři 50 – 56 kg
+    sex: 2
+- model: taekwondo.matsogi
+  pk: 15
+  fields:
+    name: Junioři 56 – 62 kg
+    sex: 2
+- model: taekwondo.matsogi
+  pk: 16
+  fields:
+    name: Junioři 62 – 68 kg
+    sex: 2
+- model: taekwondo.matsogi
+  pk: 17
+  fields:
+    name: Junioři 68 - 75 kg
+    sex: 2
+- model: taekwondo.matsogi
+  pk: 18
+  fields:
+    name: Junioři nad 75 kg
+    sex: 2
+- model: taekwondo.matsogi
+  pk: 19
+  fields:
+    name: Juniorky do 45 kg
+    sex: 1
+- model: taekwondo.matsogi
+  pk: 20
+  fields:
+    name: Juniorky 45 – 50 kg
+    sex: 1
+- model: taekwondo.matsogi
+  pk: 21
+  fields:
+    name: Juniorky 50 – 55 kg
+    sex: 1
+- model: taekwondo.matsogi
+  pk: 22
+  fields:
+    name: Juniorky 55 – 60 kg
+    sex: 1
+- model: taekwondo.matsogi
+  pk: 23
+  fields:
+    name: Juniorky 60 – 65 kg
+    sex: 1
+- model: taekwondo.matsogi
+  pk: 24
+  fields:
+    name: Juniorky nad 65 kg
+    sex: 1
+- model: taekwondo.matsogi
+  pk: 25
+  fields:
+    name: Senioři do 57 kg
+    sex: 1
+- model: taekwondo.matsogi
+  pk: 26
+  fields:
+    name: Senioři 57 – 63 kg
+    sex: 2
+- model: taekwondo.matsogi
+  pk: 27
+  fields:
+    name: Senioři 63 – 70 kg
+    sex: 2
+- model: taekwondo.matsogi
+  pk: 28
+  fields:
+    name: Senioři 70 – 78 kg
+    sex: 2
+- model: taekwondo.matsogi
+  pk: 29
+  fields:
+    name: Senioři 78 – 85 kg
+    sex: 2
+- model: taekwondo.matsogi
+  pk: 30
+  fields:
+    name: Senioři nad 85 kg
+    sex: 2
+- model: taekwondo.matsogi
+  pk: 31
+  fields:
+    name: Seniorky do 50 kg
+    sex: 1
+- model: taekwondo.matsogi
+  pk: 32
+  fields:
+    name: Seniorky 50 – 56 kg
+    sex: 1
+- model: taekwondo.matsogi
+  pk: 33
+  fields:
+    name: Seniorky 56 – 62 kg
+    sex: 1
+- model: taekwondo.matsogi
+  pk: 34
+  fields:
+    name: Seniorky 62 – 68 kg
+    sex: 1
+- model: taekwondo.matsogi
+  pk: 35
+  fields:
+    name: Seniorky 68 – 75 kg
+    sex: 1
+- model: taekwondo.matsogi
+  pk: 36
+  fields:
+    name: Seniorky nad 75 kg
+    sex: 1
+    
+- model: taekwondo.tull
+  pk: 1
+  fields:
+    name: Nepřiřazeno
+    sex: 1
+- model: taekwondo.tull
+  pk: 2
+  fields:
+    name: Nepřiřazeno
+    sex: 2
+- model: taekwondo.tull
+  pk: 3
+  fields:
+    name: Žáci 9. - 8. kup
+    sex: 2
+- model: taekwondo.tull
+  pk: 4
+  fields:
+    name: Žáci 7. - 5. Kup
+    sex: 2
+- model: taekwondo.tull
+  pk: 5
+  fields:
+    name: Žáci 4. - 3. Kup
+    sex: 2
+- model: taekwondo.tull
+  pk: 6
+  fields:
+    name: Žáci 2. - 1. kup
+    sex: 2
+- model: taekwondo.tull
+  pk: 7
+  fields:
+    name: Žáci I. Dan a výše
+    sex: 2
+- model: taekwondo.tull
+  pk: 8
+  fields:
+    name: Žákyně 9. - 8. kup
+    sex: 1
+- model: taekwondo.tull
+  pk: 9
+  fields:
+    name: Žákyně 7. - 5. Kup
+    sex: 1
+- model: taekwondo.tull
+  pk: 10
+  fields:
+    name: Žákyně 4. - 3. Kup
+    sex: 1
+- model: taekwondo.tull
+  pk: 11
+  fields:
+    name: Žákyně 2. - 1. kup
+    sex: 1
+- model: taekwondo.tull
+  pk: 12
+  fields:
+    name: Žákyně I. Dan a výše
+    sex: 1
+- model: taekwondo.tull
+  pk: 13
+  fields:
+    name: Junioři 9. - 8. kup
+    sex: 2
+- model: taekwondo.tull
+  pk: 14
+  fields:
+    name: Junioři 7. - 5. Kup
+    sex: 2
+- model: taekwondo.tull
+  pk: 15
+  fields:
+    name: Junioři 4. - 3. Kup
+    sex: 2
+- model: taekwondo.tull
+  pk: 16
+  fields:
+    name: Junioři 2. - 1. kup
+    sex: 2
+- model: taekwondo.tull
+  pk: 17
+  fields:
+    name: Junioři I. Dan a výše
+    sex: 2
+- model: taekwondo.tull
+  pk: 18
+  fields:
+    name: Juniorky 9. - 8. kup
+    sex: 1
+- model: taekwondo.tull
+  pk: 19
+  fields:
+    name: Juniorky 7. - 5. Kup
+    sex: 1
+- model: taekwondo.tull
+  pk: 20
+  fields:
+    name: Juniorky 4. - 3. Kup
+    sex: 1
+- model: taekwondo.tull
+  pk: 21
+  fields:
+    name: Juniorky 2. - 1. kup
+    sex: 1
+- model: taekwondo.tull
+  pk: 22
+  fields:
+    name: Juniorky I. Dan a výše
+    sex: 1
+- model: taekwondo.tull
+  pk: 23
+  fields:
+    name: Senioři 9. - 8.Kup
+    sex: 2
+- model: taekwondo.tull
+  pk: 24
+  fields:
+    name: Senioři 4. - 3.Kup
+    sex: 2
+- model: taekwondo.tull
+  pk: 25
+  fields:
+    name: Senioři 2. - 1. Kup
+    sex: 2
+- model: taekwondo.tull
+  pk: 26
+  fields:
+    name: Senioři I. - II. Dan
+    sex: 2
+- model: taekwondo.tull
+  pk: 27
+  fields:
+    name: Senioři III. Dan a výše
+    sex: 2
+- model: taekwondo.tull
+  pk: 28
+  fields:
+    name: Seniorky 9. - 8.Kup
+    sex: 1
+- model: taekwondo.tull
+  pk: 29
+  fields:
+    name: Seniorky 4. - 3.Kup
+    sex: 1
+- model: taekwondo.tull
+  pk: 30
+  fields:
+    name: Seniorky 2. - 1. Kup
+    sex: 1
+- model: taekwondo.tull
+  pk: 31
+  fields:
+    name: Seniorky I. - II. Dan
+    sex: 1
+- model: taekwondo.tull
+  pk: 32
+  fields:
+    name: Seniorky III. Dan a výše
+    sex: 1
+
+- model: taekwondo.wirok
+  pk: 1
+  fields:
+    name: Nepřiřazeno
+    sex: 1
+- model: taekwondo.wirok
+  pk: 2
+  fields:
+    name: Nepřiřazeno
+    sex: 2
+- model: taekwondo.wirok
+  pk: 3
+  fields:
+    name: Junioři'
+    sex: 2
+- model: taekwondo.wirok
+  pk: 4
+  fields:
+    name: Juniorky
+    sex: 1
+- model: taekwondo.wirok
+  pk: 5
+  fields:
+    name: Senioři
+    sex: 2
+- model: taekwondo.wirok
+  pk: 6
+  fields:
+    name: Seniorky
+    sex: 1
+
+- model: taekwondo.tki
+  pk: 1
+  fields:
+    name: Nepřiřazeno
+    sex: 1
+- model: taekwondo.tki
+  pk: 2
+  fields:
+    name: Nepřiřazeno
+    sex: 2
+- model: taekwondo.tki
+  pk: 3
+  fields:
+    name: Žáci
+    sex: 2
+- model: taekwondo.tki
+  pk: 4
+  fields:
+    name: Žákyně
+    sex: 1
+- model: taekwondo.tki
+  pk: 5
+  fields:
+    name: Junioři
+    sex: 2
+- model: taekwondo.tki
+  pk: 6
+  fields:
+    name: Juniorky
+    sex: 1
+- model: taekwondo.tki
+  pk: 7
+  fields:
+    name: Senioři
+    sex: 2
+- model: taekwondo.tki
+  pk: 8
+  fields:
+    name: Seniorky
+    sex: 1
+
+- model: taekwondo.membercompetition
+  pk: 1
+  fields:
+    member: 1
+    competition: 1
+    trainee: True
+    coach: True
+    tki: 1
+    tull: 1
+    wirok: 1
+    matsogi: 1
+- model: taekwondo.membercompetition
+  pk: 2
+  fields:
+    member: 2
+    competition: 1
+    trainee: False
+    coach: False
+    tki: 2
+    tull: 2
+    wirok: 2
+    matsogi: 2
+- model: taekwondo.membercompetition
+  pk: 3
+  fields:
+    member: 3
+    competition: 1
+    trainee: True
+    coach: True
+    tki: 3
+    tull: 3
+    wirok: 3
+    matsogi: 3
+- model: taekwondo.membercompetition
+  pk: 4
+  fields:
+    member: 4
+    competition: 1
+    trainee: False
+    coach: False
+    tki: 4
+    tull: 4
+    wirok: 4
+    matsogi: 4

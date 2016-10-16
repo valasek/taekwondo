@@ -87,3 +87,18 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Ignore Idea config files
+/.idea
+
+
+# Django gitignore
+*.py[co]
+MANIFEST
+docs/_build/
+docs/locale/
+node_modules/
+tests/coverage_html/
+tests/.coverage
+tests/report/
+*.sqlite3
