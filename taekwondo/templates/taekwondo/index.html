@@ -1,0 +1,7 @@
+This is index page
+
+    <ul>
+    {% for f in members_list %}
+        <li><a href="/{{ f.id }}/">{{ f.first_name }}</a></li>
+    {% endfor %}
+    </ul>

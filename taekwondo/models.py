@@ -71,12 +71,14 @@ class Wirok(models.Model):
     def __str__(self):
         return self.name
 
+
 class Tki(models.Model):
     name = models.CharField(max_length=50)
     sex = models.ForeignKey(Sex, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
+
 
 class MemberCompetition(models.Model):
     member = models.ForeignKey(Member, on_delete=models.CASCADE)
