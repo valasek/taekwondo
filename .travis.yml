@@ -12,4 +12,5 @@ before_script:
   - "pep8 --exclude=migrations ."
   # - pyflakes -x W .
 script:
-  - python setup.py test
+  # - python setup.py test
+  ./manage.py test
