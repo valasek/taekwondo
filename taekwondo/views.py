@@ -4,7 +4,7 @@ from .models import Member
 
 
 def index(request):
-    return render (request, "taekwondo/index.html")
+    return render(request, "taekwondo/index.html")
 
 
 def member_list(request):
@@ -28,8 +28,8 @@ class IndexView(generic.ListView):
     context_object_name = 'members_list'
 
     def get_queryset(self):
-       """Return the list of members."""
-       return Member.objects.all  # order_by('-pub_date')[:5]
+        """Return the list of members."""
+        return Member.objects.all  # order_by('-pub_date')[:5]
 
 
 class DetailView(generic.DetailView):

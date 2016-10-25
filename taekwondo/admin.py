@@ -1,7 +1,8 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Competition, Member, Team, Tki, Tull, Matsogi, Wirok, Level, Sex, MemberCompetition
+from .models import Competition, Member, Team, Level, Sex, MemberCompetition
+from .models import Tki, Tull, Matsogi, Wirok
 
 admin.site.register(Competition)
 admin.site.register(Member)
