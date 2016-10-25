@@ -1,0 +1,8 @@
+coverage==4.2
+Django==1.10.2
+django-bootstrap3==7.1.0
+Pillow==3.4.2
+pip==8.1.2
+PyYAML==3.12
+setuptools==28.3.0
+wheel==0.30.0a0

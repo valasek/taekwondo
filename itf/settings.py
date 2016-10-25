@@ -25,12 +25,14 @@ SECRET_KEY = '=k394)(l--qcg^jt0u4ak(%zc1am44hb)67jagudi*9n1g898f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ ]
+# ALLOWED_HOSTS = [ '127.0.0.1', 'localhost' ]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'bootstrap3',
     'taekwondo.apps.TaekwondoConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -113,7 +115,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/

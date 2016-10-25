@@ -1,4 +1,4 @@
-# taekwondo
+# Taekwondo
 
 Manage Taekwondo teams, competitors and competitions. Web based portal allows you to register competitor to particular competition.
 
