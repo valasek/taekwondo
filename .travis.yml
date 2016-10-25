@@ -1,23 +1,28 @@
 language: python
 python:
-  - "3.5"
+- '3.5'
 env:
-  - DJANGO=1.10.2
+- DJANGO=1.10.2
 install:
-  - pip install -q -r requirements.txt
-  - pip install -q Django==$DJANGO
-  - pip install pep8
-  # - pip install https://github.com/dcramer/pyflakes/tarball/master
+- pip install -q -r requirements.txt
+- pip install -q Django==$DJANGO
+- pip install pep8
 before_script:
-  - "pep8 --exclude=migrations ."
-  # - pyflakes -x W .
-script:
-  # - python setup.py test
-  ./manage.py test
+- pep8 --exclude=migrations .
 deploy:
-  provider: openshift
-  user: "YOU USER NAME"
-  password: "YOUR PASSWORD" # can be encrypted
-  domain: "YOUR OPENSHIFT DOMAIN"
+  provider: heroku
+  buildpack: python
+  api_key:
+    secure: bP/41LyggyQE1uGAYx8UJgF10keMs+PICT/N3nOq4yB0AGEFbjYubPaHyDdsNGWArve8AMCbI5Qwd561NXyVZ5r52sG0c1iW0X855fuDt9FOzAF7QhNINZ3zZjpSbLejlwVsZNwKpjfHIUonTNltNqgOjhnyaqZrseeIKc+hVP83+pB1X9bu/FGUSS79uTRcU1SEwwJ4Z5vC4zx7+HDJetjjS7kHNV1TEM7/OaJwoN/Gs+wVhz/rTXb9c3Ylu3u2ztpzIRb19kd5+gN/Zps+fobQet8Fk+usraH5+oyQg5jOWPK7kiDC/sLmjo0mW3NADhjqtRPAMnRy8WzZiBvVssa0rqC1S6NQWOp1erStmJe4ggiBApB40AetrXz3gJQAdLe+UdL8+q7r2mRzwckx8E74MfOxyA2emR3QS9er7FlmHIg+u7Oq0piRjJvQ+VZliS9yGBRR0T0SjVS/cVKKGLfojX+iRciFoZdlullPqFw6osjrY0fUMhOpMl1pfnlq/FMS4I7M2PDduSJImaQzrhYklA28rMlsjdir7RrTsFKDa9Xkth2+tGrP4LvCy6Ckr6GHD4DkaL2y4RS4dolTgcxu9+PyxVz7ccfGlW9WJwzTD940ATKiSeHmwYCI57trh/3I/cic58xdusoVXwiWv4hf6ote5CuH+ss9UiXFFm4=
+  app: savasoft
+  on:
+    repo: valasek/taekwondo
+  strategy: git
+  run:
+    - "python ./manage.py syncdb --noinput --settings=settings.heroku"
+    - "python ./manage.py migrate --all --settings=settings.heroku"
+    # - "python ./manage.py load_random_glucose_data jsmith --settings=settings.heroku"
+    - restart
+script: "coverage run --source=. ./manage.py test"
 notifications:
   email: false
