@@ -1,5 +1,4 @@
-# Taekwondo
-
+# Taekwondo [![Build Status](https://travis-ci.org/valasek/taekwondo.svg?branch=master)](https://travis-ci.org/valasek/taekwondo)
 Manage Taekwondo teams, competitors and competitions. Web based portal allows you to register competitor to particular competition.
 
 ## Demo

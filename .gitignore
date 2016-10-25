@@ -102,3 +102,6 @@ tests/coverage_html/
 tests/.coverage
 tests/report/
 *.sqlite3
+
+# Heroku gitignore
+staticfiles

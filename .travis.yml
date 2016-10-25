@@ -14,3 +14,10 @@ before_script:
 script:
   # - python setup.py test
   ./manage.py test
+deploy:
+  provider: openshift
+  user: "YOU USER NAME"
+  password: "YOUR PASSWORD" # can be encrypted
+  domain: "YOUR OPENSHIFT DOMAIN"
+notifications:
+  email: false
