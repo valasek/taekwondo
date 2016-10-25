@@ -1,1 +1,1 @@
-web: gunicorn itf:app --log-file -
+web: gunicorn taekwondo:itf --log-file -
