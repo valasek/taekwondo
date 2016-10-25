@@ -7,9 +7,9 @@ install:
   - pip install -q -r requirements.txt
   - pip install -q Django==$DJANGO
   - pip install pep8
-  - pip install https://github.com/dcramer/pyflakes/tarball/master
+  # - pip install https://github.com/dcramer/pyflakes/tarball/master
 before_script:
   - "pep8 --exclude=migrations ."
-  - pyflakes -x W src
+  # - pyflakes -x W .
 script:
   - python setup.py test
