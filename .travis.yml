@@ -9,7 +9,7 @@ install:
 - pip install pep8
 before_script:
 - pep8 --exclude=migrations .
-- pyflakes .
+# - pyflakes .
 deploy:
   provider: heroku
   buildpack: python
