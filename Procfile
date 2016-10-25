@@ -1,1 +1,1 @@
-web: gunicorn itf.wsgi --log-file -
+web: gunicorn itf:app --log-file -
