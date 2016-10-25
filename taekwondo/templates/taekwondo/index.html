@@ -1,19 +1,17 @@
-{# Load the tag library #}
-{% load bootstrap3 %}
+{% extends "./layout.html" %}
+{% block title %}Taekwondo{% endblock %}
+{% block page_title %}Taekwondo{% endblock %}
+{% block body %}
 
-{# Load CSS and JavaScript #}
-{% bootstrap_css %}
-
-This is main index page
-
-<a href="member">Members</a>
-<a href="user">Users</a>
-<a href="team">Teams</a>
-<a href="competition">Competition</a>
-<a href="admin">Administration</a>
+    <a href="member">Members</a>
+    <a href="user">Users</a>
+    <a href="team">Teams</a>
+    <a href="competition">Competition</a>
+    <a href="admin">Administration</a>
 
     <ul>
     {% for f in members_list %}
         <li><a href="/{{ f.id }}/">{{ f.first_name }}</a></li>
     {% endfor %}
     </ul>
+{% endblock %}

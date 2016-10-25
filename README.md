@@ -2,7 +2,7 @@
 Manage Taekwondo teams, competitors and competitions. Web based portal allows you to register competitor to particular competition.
 
 ## Demo
-Not available yet.
+Check the lastest version at [savasoft.herokuapp.com](http://savasoft.herokuapp.com).
 
 ## License
 

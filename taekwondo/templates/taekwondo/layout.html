@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <link rel="shortcut icon" href="{%  static 'favicon.ico' %}">
+    {# Load the tag library #}
+    {% load bootstrap3 %}
+    {# Load CSS and JavaScript #}
+    {% bootstrap_css %}
+    <title>{% block title %}{% endblock %} - ČNUT ITF</title>
+    {% block head %}{% endblock %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                {% if not session.logged_in %}
+                <li><a href="register">Register</a></li>
+                <li><a href="login">Log in</a></li>
+                {% else %}
+                <li role="presentation" class="active"><a href="{%  url 'competition_list' %}">Competitions</a></li>
+                <li role="presentation"><a href="{% url 'team_list' %}">Teams</a></li>
+                <li role="presentation"><a href="{% url 'member_list' %}">Members</a></li>
+                {% if session.is_admin %}
+                <li role="presentation"><a href="{% url 'administration' %}">Administration</a></li>
+                {% endif %}
+                <li><a href="{%  url 'logout' %}">Log out</a></li>
+                {% endif %}
+            </ul>Odhlásit
+        </nav>
+        <h3 class="text-muted">{% block page_title %}{% endblock %}</h3>
+        {% block nav %}{% endblock %}
+    </div>
+    <br/><br/>
+
+    {% block body %}{% endblock %}
+    <br/><br/>
+    <footer class="footer">
+        <p>&copy; Česká Národní Unie Taekwon-Do ITF 2016</p>
+    </footer>
+</div>
+</body>
+</html>
