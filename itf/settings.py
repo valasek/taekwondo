@@ -59,7 +59,7 @@ ROOT_URLCONF = 'itf.urls'
 
 
 class InvalidTemplateVariable(str):
-    def __mod__(self,other):
+    def __mod__(self, other):
         from django.template.base import TemplateSyntaxError
         raise TemplateSyntaxError("Invalid variable : '%s'" % other)
 

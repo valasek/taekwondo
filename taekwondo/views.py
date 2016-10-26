@@ -46,9 +46,9 @@ def member_delete(request):
             id = request.POST.get("id")
             member = get_object_or_404(Member, pk=id)
             member.delete()
-            return JsonResponse( { 'id' : id } )
+            return JsonResponse({'id': id})
     else:
-        return JsonResponse( { "success": false, "error": { "code": 123, "message": "An error occurred!"}} )
+        return JsonResponse({"success": False, "error": {"code": 123, "message": "An error occurred!"}})
 
 
 def competition_list(request):
