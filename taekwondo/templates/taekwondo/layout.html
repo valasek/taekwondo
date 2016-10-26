@@ -17,19 +17,14 @@
     <div class="header">
         <nav>
             <ul class="nav nav-pills pull-right">
-                {% if not session.logged_in %}
                 <li><a href="register">Register</a></li>
                 <li><a href="login">Log in</a></li>
-                {% else %}
                 <li role="presentation" class="active"><a href="{%  url 'competition_list' %}">Competitions</a></li>
                 <li role="presentation"><a href="{% url 'team_list' %}">Teams</a></li>
                 <li role="presentation"><a href="{% url 'member_list' %}">Members</a></li>
-                {% if session.is_admin %}
-                <li role="presentation"><a href="{% url 'administration' %}">Administration</a></li>
-                {% endif %}
-                <li><a href="{%  url 'logout' %}">Log out</a></li>
-                {% endif %}
-            </ul>Odhlásit
+                <li role="presentation"><a href="administration">Administration</a></li>
+                <li><a href="logout">Log out</a></li>
+            </ul>
         </nav>
         <h3 class="text-muted">{% block page_title %}{% endblock %}</h3>
         {% block nav %}{% endblock %}

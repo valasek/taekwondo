@@ -1,0 +1,34 @@
+{% extends "./layout.html" %}
+{% block title %}Edit Member{% endblock %}
+{% block page_title %}Edit Member{% endblock %}
+{% block body %}
+    <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>ITF ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Sex</th>
+                <th>Birthdate</th>
+                <th>Level</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for member in members %}
+                <tr id="{{member.itf_id}}">
+                    <td>{{ member.itf_id }}</td>
+                    <td>{{ member.first_name }}</td>
+                    <td>{{ member.last_name|safe }}</td>
+                    <td>{{ member.sex }}</td>
+                    <td>{{ member.birthdate }}</td>
+                    <td>{{ member.level }}</td>
+                    <td align="center">
+                        <button class="glyphicon glyphicon-edit" onclick="edit_member({{member.itf_id}})"></button>&nbsp;&nbsp;&nbsp;
+                        <button class="glyphicon glyphicon-remove-sign" onclick="delMember({{member.itf_id}})"></button>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

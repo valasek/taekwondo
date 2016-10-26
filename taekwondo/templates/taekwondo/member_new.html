@@ -1,0 +1,58 @@
+{% extends "./layout.html" %}
+{% block title %}New Member{% endblock %}
+{% block page_title %}New Member{% endblock %}
+{% block body %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <div class="row">
+            <div class="col-sm-6">
+                <h4>Personal Information</h4>
+                <div class="row form-group">
+                    <div class="col-sm-3">Photo</div>
+                    <div class="col-sm-9" align="left">Photo</div>
+                </div>
+                <div class="row form-group">
+                    {{ form.first_name.errors }}
+                    <div class="col-sm-3"><label for="{{ form.first_name.id_for_label }}">First Name:</label></div>
+                    <div class="col-sm-9" align="left">{{ form.first_name }}</div>
+                </div>
+                <div class="row form-group">
+                    {{ form.last_name.errors }}
+                    <div class="col-sm-3"><label for="{{ form.last_name.id_for_label }}">Last Name:</label></div>
+                    <div class="col-sm-9" align="left">{{ form.last_name }}</div>
+                </div>
+                <div class="row form-group">
+                    {{ form.birthdate.errors }}
+                    <div class="col-sm-3"><label for="{{ form.birthdate.id_for_label }}">Birthdate:</label></div>
+                    <div class="col-sm-9" align="left">{{ form.birthdate }}</div>
+                </div>
+                <div class="row form-group">
+                    {{ form.sex.errors }}
+                    <div class="col-sm-3"><label for="{{ form.sex.id_for_label }}">Sex:</label></div>
+                    <div class="col-sm-9" align="left">{{ form.sex }}</div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <h4>Taekwondo Information</h4>
+                <div class="row form-group">
+                    {{ form.team.errors }}
+                    <div class="col-sm-3"><label for="{{ form.team.id_for_label }}">Team:</label></div>
+                    <div class="col-sm-9" align="left">{{ form.team }}</div>
+                </div>
+                <div class="row form-group">
+                    {{ form.itf_id.errors }}
+                    <div class="col-sm-3"><label for="{{ form.itf_id.id_for_label }}">ITF ID:</label></div>
+                    <div class="col-sm-9" align="left">{{ form.itf_id }}</div>
+                </div>
+                <div class="row form-group">
+                    {{ form.level.errors }}
+                    <div class="col-sm-3"><label for="{{ form.level.id_for_label }}">Level:</label></div>
+                    <div class="col-sm-9" align="left">{{ form.level }}</div>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-default">Save</button>
+        <button type="reset" class="btn">Back</button>
+    </form>
+{% endblock %}

@@ -1,1 +1,88 @@
-Member list
+{% extends "./layout.html" %}
+{% block title %}Members{% endblock %}
+{% block head %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        //For getting CSRF token
+        function getCookie(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie != '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = jQuery.trim(cookies[i]);
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        };
+        function delMember(id) {
+            console.log("ID: " + id);
+            //Prepare csrf token
+            var csrftoken = getCookie('csrftoken');
+            $.ajax({
+                url : "delete/", // the endpoint,commonly same url
+                type : "POST", // http method
+                data : { csrfmiddlewaretoken : csrftoken,
+                         id : id }, // data sent with the post request
+
+                // handle a successful response
+                success : function(json) {
+                    //console.log(json); // another sanity check
+                    //On success show the data posted to server as a message
+                    $('#'+id).remove();
+                    //alert('Member with '+ id +' deleted');
+                },
+
+                // handle a non-successful response
+                error : function(xhr,errmsg,err) {
+                    console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
+                }
+            });
+        };
+    </script>
+{% endblock %}
+{% block page_title %}Members <small>({{ count }})</small>{% endblock %}
+{% block body %}
+    <div align="right">
+        <a href="{%  url 'member_new' %}"><span class="glyphicon glyphicon-plus"></a>
+    </div>
+    <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>ITF ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Sex</th>
+                <th>Birthdate</th>
+                <th>Level</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for member in members %}
+                <tr id="{{ member.id }}">
+                    <td>{{ member.itf_id }}</td>
+                    <td>{{ member.first_name }}</td>
+                    <td>{{ member.last_name }}</td>
+                    <td>{{ member.sex }}</td>
+                    <td>{{ member.birthdate }}</td>
+                    <td>{{ member.level }}</td>
+                    <td align="center">
+                        <button class="glyphicon glyphicon-edit" onclick="edit_member({{member.id}})"></button>&nbsp;&nbsp;&nbsp;
+                        <button class="glyphicon glyphicon-remove-sign" onclick="delMember({{member.id}})"></button>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div align="center">
+        <br/>
+        <a href="add_member">
+            <button type="button" class="btn btn-info">Add member</button>
+        </a>
+    </div>
+{% endblock %}
